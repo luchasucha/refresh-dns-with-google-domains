@@ -1,17 +1,16 @@
 /**
  * @typedef {Object} Options
  * @property {string} dnsAddress
- * @property {string} statusFileName
  * @property {string} username
  * @property {string} password
  */
 
 try {
     const fs = require('fs');
-    let options = JSON.parse(fs.readFileSync("/home/luca/ext_ip.config").toString());
-    if (options.dnsAddress !== undefined && options.statusFileName !== undefined && options.username !== undefined && options.password !== undefined) {
+    let options = JSON.parse(fs.readFileSync(process.env.HOME + "/ext_ip.config").toString());
+    if (options.dnsAddress !== undefined && options.username !== undefined && options.password !== undefined) {
         const dnsAddress = options.dnsAddress;
-        const statusFileName = options.statusFileName;
+        const statusFileName = process.env.HOME + '/ext_ip.txt';
         const username = options.username;
         const password = options.password;
         setInterval(() => {
