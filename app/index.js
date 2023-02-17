@@ -89,3 +89,8 @@ try {
 } catch (error) {
     console.error(error);
 }
+
+module.exports = {
+    name: "refresh-dns-with-google-domains",
+    version: "0.0.1"
+}

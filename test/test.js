@@ -26,4 +26,10 @@ if (options.dnsAddress === undefined || options.username === undefined || option
     console.error("Bad configuration file.");
     return;
 }
-console.log("TEST OK");
+const refreshDns = require("refresh-dns-with-google-domains");
+if (refreshDns.name !== undefined && refreshDns.version !== undefined) {
+    console.log(refreshDns.name + " " + refreshDns.version);
+    console.log("TEST OK");
+} else {
+    console.error("Bad module");
+}
