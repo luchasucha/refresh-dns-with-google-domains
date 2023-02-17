@@ -1,0 +1,17 @@
+{
+  "name": "refresh-dns-with-google-domains",
+  "version": "0.0.1",
+  "description": "Simple polling to check external ip address if it's mapped in a Dynamic DNS in Google Domains. It needs a Google Domains account with at least one domain active.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "Lucha <luchasucha@gmail.com>",
+  "license": "ISC"
+}
