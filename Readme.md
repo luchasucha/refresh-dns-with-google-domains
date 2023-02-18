@@ -1,4 +1,4 @@
-[![RefreshDns Logo](img/logo.png)]
+![RefreshDns Logo](img/logo.png)
 
 Fast, light, minimalist DNS polling refresh for Google Domains Dynamic DNS [Node.js](http://nodejs.org).
 
