@@ -93,7 +93,7 @@ const refresh = () => {
 }
 
 module.exports = {
-    name: process.env.npm_package_name,
-    version: process.env.npm_package_version,
+    name: require(__dirname + `/package.json`).name,
+    version: require(__dirname + `/package.json`).version,
     refresh: refresh
 }
