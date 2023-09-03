@@ -32,11 +32,10 @@ const refresh = () => {
                             try {
                                 const data = JSON.parse(body);
                                 console.log(data.ip);
-                                let ipDisk;
+                                let ipDisk = "";
                                 try {
-                                    ipDisk = fs.readFileSync(statusFileName);
+                                    ipDisk = fs.readFileSync(statusFileName).toString();
                                 } catch (error) {
-                                    ipDisk = "";
                                     let desc = fs.openSync(statusFileName, 'w');
                                     fs.closeSync(desc);
                                 }
@@ -63,18 +62,20 @@ const refresh = () => {
                                                     let addressArray = address.split(".");
                                                     if (addressArray.length === 4 && !isNaN(parseInt(addressArray[0])) && !isNaN(parseInt(addressArray[1])) && !isNaN(parseInt(addressArray[2])) && !isNaN(parseInt(addressArray[3]))) {
                                                         console.log(`Address change successful. Response: ${response}`);
+                                                        fs.writeFileSync(statusFileName, data.ip);
                                                     } else {
                                                         console.error(`Address change unsuccessful. Response: ${response}`);
                                                     }
                                                 } else {
                                                     console.error(`Address change unsuccessful. Response: ${response}`);
                                                 }
+                                            } else if (ipDisk.length === 0) {
+                                                fs.writeFileSync(statusFileName, data.ip);
                                             }
                                         } catch (error) {
                                             console.error(error)
                                         }
                                     });
-                                    fs.writeFileSync(statusFileName, data.ip);
                                 }
                             } catch (error) {
                                 console.error(error);
