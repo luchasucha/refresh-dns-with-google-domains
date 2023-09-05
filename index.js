@@ -40,8 +40,8 @@ const refresh = () => {
                                     fs.closeSync(desc);
                                 }
                                 if (data.ip !== ipDisk) {
-                                    const dns = require('dns')
-                                    dns.lookup(dnsAddress, async (err, result) => {
+                                    const dns = require('node-dns');
+                                    dns.lookup(dnsAddress, 4, async (err, result, family) => {
                                         try {
                                             console.log(result);
                                             if (result !== data.ip) {
