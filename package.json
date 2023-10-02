@@ -1,6 +1,6 @@
 {
   "name": "refresh-dns-with-google-domains",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Simple polling to check external ip address if it's mapped in a Dynamic DNS in Google Domains. It needs a Google Domains account with at least one domain active.",
   "main": "index.js",
   "scripts": {

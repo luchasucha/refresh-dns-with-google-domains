@@ -32,7 +32,10 @@ $ npm install refresh-dns-with-google-domains
 Create a file named `ext-ip.config` in your HOME directory.
 
 ```console
-$ nano /home/USERNAME/ext-ip.config
+$ nano /home/USERNAME/ddns/host1/ext-ip.config
+$ nano /home/USERNAME/ddns/host2/ext-ip.config
+$ nano /home/USERNAME/ddns/host3/ext-ip.config
+$ nano /home/USERNAME/ddns/host4/ext-ip.config
 ```
 
 

@@ -1,5 +1,6 @@
 const fs = require('fs');
-let optionFileNAme = process.env.HOME + "/ext_ip.config";
+fs.mkdirSync(process.env.HOME + "/ddns")
+let optionFileNAme = process.env.HOME + "/ddns/host1/ext_ip.config";
 let descriptor;
 try {
     descriptor = fs.openSync(optionFileNAme, "r");
