@@ -8,7 +8,7 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "fs": "^0.0.1-security",
+    "fs": "^0.0.2",
     "http": "^0.0.1-security",
     "node-dns": "^0.1.0"
   },
